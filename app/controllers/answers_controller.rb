@@ -8,14 +8,15 @@ class AnswersController < ApplicationController
 	end
 
 	def create
+		@question = Question.find(params[:question_id])
 		answer_params = params[:answer].merge({ :question_id => params[:question_id] })
 		@answer = current_user.answers.new(answer_params)
 		if @answer.save
 			flash[:success] = "Your answers have been added to the question."
-			redirect_to question_path(params[:question_id])
+			redirect_to question_path(@question)
 		else
 			flash[:notice] = "Something went wrong!"
-			redirect_to new_question_answer_path(params[:question_id])
+			render 'new'
 		end
 	end
 

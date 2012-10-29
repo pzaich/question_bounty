@@ -1,0 +1,11 @@
+<% if current_user %>
+	<% @questions.each do |question| %>
+		<h2>
+			<%= question.title %>
+		</h2>
+	<% end %>
+<% else %>
+	<h1>
+		Welcome to 3Bullets
+	</h1>
+<% end %>

@@ -1,5 +1,6 @@
 QuestionBounty::Application.routes.draw do
   devise_for :users
+  resources :questions
   devise_scope :user do
   get "sign_in", :to => "devise/sessions#new"
 end

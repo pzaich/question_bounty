@@ -1,0 +1,9 @@
+<%= form_for [@question, @answer] do |f| %>
+	<%= f.fields_for :arguments do |b| %>
+			<p>
+				<%= b.label :response %>
+				<%= b.text_area :response %>
+			</p>
+	<% end %>
+	<%= f.submit :class => "btn" %>
+<% end %>

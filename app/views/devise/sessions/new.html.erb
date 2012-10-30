@@ -1,0 +1,14 @@
+<div style="text-align:center;padding:50px 0;">
+  <img src="/assets/3b_logo.png" />
+  <p style="padding:10px 0">Get Simple, Fast.</p>
+</div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="well" style="width:240px;margin:0 auto">
+    <div><%= f.email_field :email, :placeholder => "Email", :style => "width:226px;" %></div>
+    <div class="form-inline">
+      <%= f.password_field :password, :placeholder => "Password", :style => "width:133px;" %>
+      <%= f.submit "Sign in", :class => "btn btn-danger", :style => "margin-left:14px" %>
+    </div>
+    <div style="padding:10px 5px 0 5px;"><a href="/users/sign_up">Are you New to 3 Bullets?</a></div>
+  </div>
+<% end %>

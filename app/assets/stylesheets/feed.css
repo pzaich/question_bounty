@@ -1,0 +1,32 @@
+.feed-item {
+  display: block;
+  overflow: hidden;
+  padding:15px 10px;
+}
+
+.feed-item .image {
+  float: left;
+  height: 70px;
+  width: 70px;
+}
+
+.feed-item .caption {
+  float: left;
+  padding: 10px;
+}
+
+.feed-item .caption h3 {
+  color: #3a3a3a;
+}
+
+.feed-item .caption .accessory {
+  color: #e3e3e3;
+}
+
+.feed-item .caption .accessory strong {
+  color: #d60f16;
+}
+
+.feed-item .icon {
+  float:right;
+}

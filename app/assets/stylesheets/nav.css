@@ -1,0 +1,25 @@
+.navbar {
+  background-color:#e3e3e3;
+}
+
+.navbar a {
+  color: #3a3a3a;
+  float:left;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 20px 0;
+  text-align: center;
+  width:33.3%;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color: #d60f16;
+  text-decoration: none;
+}
+
+.navbar a.select {
+  color: white;
+  background-color: #d60f16;
+  text-decoration: none;
+}

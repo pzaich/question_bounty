@@ -34,11 +34,22 @@ body {
 .navbar{
 	background: #ddd;
 	height: 60px;
+	margin-bottom: 0;
 }
 
-#question_title, #question_description {
-	width: 97%
+#new_question{
+	margin-top: 10px;
+	.btn{
+		height: 36px;
+	}
+}
 
+#question_title, #question_description, #new_answer textarea {
+	width: 97%
+}
+
+#new_answer textarea{
+	height: 80px;
 }
 
 #question_title{
@@ -73,8 +84,59 @@ body {
 
 .btn {
 	margin-top: 10px;
-	height: 36px;
 	width: 100% !important;
+}
+
+.btn.bullets{
+	width: 93% !important;
+	height: 20px;
+}
+
+#new_user .btn{
+	width: auto !important;
+}
+
+.post-thumb-container{
+	height: 300px; 
+	width: 480px !important;
+	max-width: 480px;
+	overflow:hidden;
+	position: relative;
+	left: -20px;
+}
+
+.top-post-thumb{
+	width: 480px !important;
+	max-width: 480px;
+}
+
+.answers{
+	
+	list-style: none;
+	margin-left: 0;
+	li{
+		background: #FFF3F3;
+		margin-top: 5px;
+		font-size: 16px;
+		padding-top: 5px;
+		margin-bottom: 10px;
+		border: 1px solid #FADDE1;
+		li{
+			margin-top: 0;
+			margin-bottom: 20px;
+			border: none;
+		}
+	}
+}
+
+.tools{
+	background: #FFE5E6;
+	border-top: 1px solid #FADDE1;
+	text-align: center;
+	padding-bottom: 8px;
+	.btn{
+		width: 50px !important;
+	}
 }
 
 

@@ -1,21 +1,24 @@
-
-<h2><%= @question.title %></h2>
-<img src="<%= @question.image_url %>" alt="<%= @question.title %>" />
+<div class="post-thumb-container">
+	<img src="<%= @question.image_url %>" alt="<%= @question.title %>" class="top-post-thumb" />
+</div>
+<h3><%= @question.title %></h3>
 <p>
 	<%= @question.description %>
 </p>
-<p>Time Left</p>
-<h5><%= time_to_deadline(@question.expiration) %></h5>
-<h5><%= @question.bounty_chips %> Chips</h5>
-<%= link_to "Add Your Bullets", new_question_answer_path(@question), :class => "btn btn-inverse" %> 
-<ul>
+<div class="accessory">
+  <strong><%= @question.bounty_chips %></strong>
+	  &nbsp;
+	  bounty chips
+	  &nbsp;
+  <strong>
+  	<%= time_to_deadline(@question.expiration) %>
+  </strong>
+</div>
+<%= link_to "Add Your Bullets", new_question_answer_path(@question), :class => "btn btn-danger bullets" %> 
+<ul class="answers">
 	<% @answers.each do |answer| %>
 		<li id="answer<%= answer.id %>">
-			<div class="pull-left">
-				<span class="vote-total"><%= answer.votes.size %></span>
-				<%= link_to "vote up", answer_votes_path(answer), :method => :post, :remote => true, :class => "upvote" %>
-			</div>
-			<ul>
+			<ol>
 				<% answer.arguments.each do |argument| %>
 					<li>
 						<p>
@@ -23,7 +26,14 @@
 						</p>
 					</li>
 				<% end %>
-			</ul>
+			</ol>
+			<div class="tools">
+				
+				<%= link_to answer_votes_path(answer), :method => :post, :remote => true, :class => "upvote btn btn-danger"  do %>
+					<i class="icon-thumbs-up"></i>
+					<span class="vote-total"><%= answer.votes.size %></span>
+				<% end %>
+			</div>
 		</li>
 	<% end %>
 </ul>

@@ -20,11 +20,11 @@
   color: #3a3a3a;
 }
 
-.feed-item .caption .accessory {
+.accessory {
   color: #999;
 }
 
-.feed-item .caption .accessory strong {
+.accessory strong {
   color: #d60f16;
 }
 

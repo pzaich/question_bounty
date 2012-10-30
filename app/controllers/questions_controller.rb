@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
 
 	def new
 		@question = Question.new
+		@menu = 'bounty'
 	end
 
 	def create

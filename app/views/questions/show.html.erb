@@ -6,6 +6,7 @@
 </p>
 <p>Time Left</p>
 <h5><%= time_to_deadline(@question.expiration) %></h5>
+<h5><%= @question.bounty_chips %> Chips</h5>
 <%= link_to "Add Your Bullets", new_question_answer_path(@question), :class => "btn btn-inverse" %> 
 <ul>
 	<% @answers.each do |answer| %>

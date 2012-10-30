@@ -5,15 +5,13 @@
 		  <div class="caption">
         <h3><%= question.title %></h3>
         <div class="accessory">
-          <strong>16</strong>
+          <strong><%= question.bounty_chips %></strong>
           &nbsp;
           bounty chips
           &nbsp;
           <strong>
-          3
+          <%= time_to_deadline(question.expiration) %>
           </strong>
-          &nbsp;
-          hrs left
         </div>
       </div>
     </a>

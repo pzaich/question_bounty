@@ -1,20 +1,14 @@
-<%= form_for @question do |f| %>
+<%= form_for @question, :html => {:class => "form-horizontal"} do |f| %>
 	<p>
-	  <%= f.label :title %>
-	  <%= f.text_field :title %>
+	  <%= f.text_field :title, :placeholder => "What do you want to simplify?" %>
 	</p>
 	<p>
-	  <%= f.label :description %>
-	  <%= f.text_area :description %>
+	  <%= f.text_area :description, :placeholder => "Any more details?" %>
 	</p>
-	<p>
-		<%= f.label :hours, "Deadline" %>
-		<%= f.select :hours, [["24 hours", 24], ["48 Hours", 48], ["72 Hours", 72]] %>
-	</p>
+	
 	<div id="question-image">
 		<p>
-			<%= label_tag "Search for Image" %>
-			<%= text_field_tag "image_url_query_topics" %>
+			<%= text_field_tag "image_url_query_topics", "", :placeholder => "Search for Image", :class => "search-query" %>
 			<div id="circleG">
 				<div id="circleG_1" class="circleG">
 				</div>
@@ -28,7 +22,21 @@
 			<%= f.hidden_field :image_url %>
 		<p>
 	</div>
+	<div id="bounty_options">
+		<div class="control-group">
+			<%= f.label :hours, "Deadline", :class => "control-label" %>
+			<div class ="controls">
+				<%= f.select :hours, [["12 hours", 12],["24 hours", 24], ["48 Hours", 48], ["72 Hours", 72]] %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :bounty_chips, "Bounty Prize (chips)", :class => "control-label" %>
+			<div class ="controls">
+				<%= f.select :bounty_chips, [5,10,15,20,25,30,35,40,45,50,55,60] %>
+			</div>
+		</div>
+	</div>
 	<p>
-	  <%= f.submit :class => "btn" %>
+	  <%= f.submit :class => "btn btn-danger"%>
 	</p>
 <% end %>

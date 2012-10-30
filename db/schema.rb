@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121030065543) do
+ActiveRecord::Schema.define(:version => 20121030071531) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -34,9 +34,10 @@ ActiveRecord::Schema.define(:version => 20121030065543) do
     t.text     "description"
     t.datetime "expiration"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.string   "image_url"
+    t.integer  "bounty_chips"
   end
 
   create_table "users", :force => true do |t|

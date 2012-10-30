@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
+		@answers = Answer.ranked_by_vote(params[:id])
 	end
 
 	def new

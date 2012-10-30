@@ -4,6 +4,9 @@ QuestionBounty::Application.routes.draw do
   resources :questions do
     resources :answers
   end
+  resources :answers do 
+    resources :votes
+  end
   devise_scope :user do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_out", :to => "devise/sessions#destroy"

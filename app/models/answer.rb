@@ -3,5 +3,7 @@ class Answer < ActiveRecord::Base
   belongs_to :user
   belongs_to :question
   has_many :arguments
+  has_many :votes
   accepts_nested_attributes_for :arguments
+
 end

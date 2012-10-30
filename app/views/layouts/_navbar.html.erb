@@ -1,5 +1,5 @@
 <div class="navbar navbar-fixed-top">
   <a href="/" class="<%='select' if @menu == 'feed' %>">Feed</a>
-  <a href="#">Submit Bounty</a>
+  <%= link_to "Submit Bounty",new_question_path %>
   <a href="/sign_out">Sign out</a>
 </div>

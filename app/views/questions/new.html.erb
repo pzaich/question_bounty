@@ -11,6 +11,23 @@
 		<%= f.label :expiration %>
 		<%= f.date_select :expiration %>
 	</p>
+	<div id="question-image">
+		<p>
+			<%= label_tag "Search for Image" %>
+			<%= text_field_tag "image_url_query_topics" %>
+			<div id="circleG">
+				<div id="circleG_1" class="circleG">
+				</div>
+				<div id="circleG_2" class="circleG">
+				</div>
+				<div id="circleG_3" class="circleG">
+				</div>
+			</div>
+		</p>
+		<p class="clearfix">
+			<%= f.hidden_field :image_url %>
+		<p>
+	</div>
 	<p>
 	  <%= f.submit :class => "btn" %>
 	</p>

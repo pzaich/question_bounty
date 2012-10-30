@@ -8,8 +8,8 @@
 	  <%= f.text_area :description %>
 	</p>
 	<p>
-		<%= f.label :expiration %>
-		<%= f.date_select :expiration %>
+		<%= f.label :hours, "Deadline" %>
+		<%= f.select :hours, [["24 hours", 24], ["48 Hours", 48], ["72 Hours", 72]] %>
 	</p>
 	<div id="question-image">
 		<p>

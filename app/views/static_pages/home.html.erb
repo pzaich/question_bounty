@@ -1,10 +1,20 @@
 <% if current_user %>
 	<% @questions.each do |question| %>
-    <a class="feed-item">
-      <img class="image" />
+    <a class="feed-item" href="/questions/<%= question.id%>">
+      <img class="image" src="<%=question.image_url%>"/>
 		  <div class="caption">
         <h3><%= question.title %></h3>
-        <div class="accesory"></div>
+        <div class="accessory">
+          <strong>16</strong>
+          &nbsp;
+          bounty chips
+          &nbsp;
+          <strong>
+          3
+          </strong>
+          &nbsp;
+          hrs left
+        </div>
       </div>
     </a>
 	<% end %>

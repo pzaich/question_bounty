@@ -36,7 +36,6 @@
   </head>
   <body>
     <% if !request.fullpath.include? 'users/sign_in' and !request.fullpath.include? 'users/sign_up'%>
-    <%= request.fullpath %>
     <%= render :partial => 'layouts/navbar' %>
     <% end %>
 

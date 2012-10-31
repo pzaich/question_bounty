@@ -18,7 +18,6 @@ $(function () {
 				$('#circleG').hide();
 				var img = '<img id="suggested-image" src="' + data.responseData.results[1].url + '" />';
 				$('#question_image_url').val(data.responseData.results[1].url);
-				console.log($('#image_url').val());
 				$('#question-image').append(img);
 			}
 		});
